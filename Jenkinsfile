@@ -6,8 +6,8 @@ pipeline {
     }
     
     tools {
-        jdk 'jdk21'
-        nodejs 'node16'
+        jdk 'jdk17'
+        nodejs 'nodejs16'
     }
     
     environment {
