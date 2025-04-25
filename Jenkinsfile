@@ -111,16 +111,16 @@ pipeline {
                         // Build the Docker image
                         sh "docker build -t youtube-clone ."
                         // Tag the image with the dynamically fetched version
-                        sh "docker tag youtube-clone kaungmyat-hub/youtube-clone:${env.IMAGE_TAG}"
+                        sh "docker tag youtube-clone kaungmyat92/youtube-clone:${env.IMAGE_TAG}"
                         // Push the tagged image
-                        sh "docker push kaungmyat-hub/youtube-clone:${env.IMAGE_TAG}"
+                        sh "docker push kaungmyat92/youtube-clone:${env.IMAGE_TAG}"
                     }
                 }
             }
             post {
                 always {
                     // Clean up Docker images to save disk space
-                    sh "docker rmi youtube-clone kaungmyat-hub/youtube-clone:${env.IMAGE_TAG} || true"
+                    sh "docker rmi youtube-clone kaungmyat92/youtube-clone:${env.IMAGE_TAG} || true"
                 }
             }
         }
