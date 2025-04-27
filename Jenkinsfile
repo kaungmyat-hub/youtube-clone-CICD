@@ -70,7 +70,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 script {
-                    def nodeHome = tool name: 'node16', type: 'nodejs'
+                    def nodeHome = tool name: 'nodejs16', type: 'nodejs'
                     env.PATH = "${nodeHome}/bin:${env.PATH}"
                     sh "node --version"
                     sh "npm --version"
