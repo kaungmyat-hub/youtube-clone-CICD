@@ -168,7 +168,7 @@ pipeline {
                                     // Optional: print version to verify AWS credentials are working
                                     sh 'kubectl version'
                                     // Update image tag in deployment file (optional)
-                                    sh "sed -i 's|image: kaungmyat-hub/youtube-clone:.*|image: kaungmyat-hub/youtube-clone:${env.IMAGE_TAG}|' deployment.yml"
+                                    sh "sed -i 's|image: kaungmyat92/youtube-clone:.*|image: kaungmyat92/youtube-clone:${env.IMAGE_TAG}|' deployment.yml"
                                     // Deploy
                                     sh 'kubectl apply -f deployment.yml'
                                     sh 'kubectl apply -f service.yml'
